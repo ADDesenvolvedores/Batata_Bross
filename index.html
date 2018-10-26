@@ -2,26 +2,32 @@
 <html>
 
 <head>
-	<title>Batata_bross</title>
+	<title>Batata Bross</title>
 	<link rel="icon" href="img/icon.png">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/batata_bross.css">
+	<link rel="stylesheet" href="css/index.css">
 	<script src="game/js/phaser.min.js"></script>
+	<script src="src/libs/vue.js"></script>
 </head>
 
 <body>
-	<h1>Play</h1>
-	<p></p>
+	<header>
+		<h1>Batata Bross</h1>
+	</header>
 
-	<div id="app">
-		{{ teste }}
-	</div>
+	<h1 id="play">Play</h1>
+	<p id="score"></p>
 
-	<script src="src/vue.js"></script>
+	<aside id="game-config">
+		<h1>Game Configuration</h1>
+		<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
+		<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
+	</aside>
 
-	<script src="game/js/game_prototype.js"></script>
-	<script src="src/menu.js"></script>
+	<script v-if="gameConsole.gameOn == true" src="game/js/game_prototype.js"></script>
+	<script src="src/components/menu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: beige;
+
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: green;
+  background-image: linear-gradient(to bottom, greenyellow, green);
+
+  font-size: 2rem;
+
+  width: 100%;
+}
+
+header > h1 {
+  font-size: 1.5em;
+  padding: 0.5%;
+}
+
+.config-input {
+  display: block;
+  width: 35%;
+  height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+#game-config {
+  background-color: green;
+  background-image: linear-gradient(to bottom, yellowgreen, green);
+
+  height: 500px;
+  width: 25%;
+}
+
+#game-config > h1 {
+  font-size: 1.25em;
+}

@@ -1,11 +1,11 @@
-var outScore = document.querySelector("p");
-var play = document.querySelector("h1");
+var outScore = document.querySelector("#score");
+var play = document.querySelector("#play");
 play.addEventListener("click", function() {
   play.textContent = "";
   var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: gameConfig.width,
+    height: gameConfig.height,
     physics: {
       default: "arcade",
       arcade: {
