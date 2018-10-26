@@ -4,12 +4,16 @@ body {
 
   background-color: beige;
 
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
 
+/*** HEADER ***/
 header {
   background-color: green;
   background-image: linear-gradient(to bottom, greenyellow, green);
+
+  border: 3px solid #224400;
 
   font-size: 2rem;
 
@@ -20,6 +24,37 @@ header > h1 {
   font-size: 1.5em;
   padding: 0.5%;
 }
+/*** HEADER ***/
+
+/*** CONFIGURATION WINDOW ***/
+#game-config {
+  background-color: green;
+  background-image: linear-gradient(to bottom, yellowgreen, green);
+
+  border: 3px solid #224400;
+  padding: 0.5%;
+
+  height: 500px;
+  width: 25%;
+}
+
+#game-config > h1 {
+  background-image: linear-gradient(
+    to right,
+    rgba(200, 200, 200, 0),
+    rgb(18, 110, 0),
+    rgba(200, 200, 200, 0)
+  );
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  padding: 2%;
+  padding-left: 5%;
+  margin-bottom: 2%;
+
+  font-size: 1.25em;
+}
 
 .config-input {
   display: block;
@@ -27,15 +62,10 @@ header > h1 {
   height: 1.5rem;
   font-size: 1.2rem;
 }
+/*** CONFIGURATION WINDOW ***/
 
-#game-config {
-  background-color: green;
-  background-image: linear-gradient(to bottom, yellowgreen, green);
-
-  height: 500px;
-  width: 25%;
+/*** GAME WINDOW ***/
+canvas {
+  border: 3px solid #224400;
 }
-
-#game-config > h1 {
-  font-size: 1.25em;
-}
+/*** GAME WINDOW ***/

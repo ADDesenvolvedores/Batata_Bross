@@ -5,9 +5,13 @@
 	<title>Batata Bross</title>
 	<link rel="icon" href="img/icon.png">
 	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/batata_bross.css">
 	<link rel="stylesheet" href="css/index.css">
+
 	<script src="game/js/phaser.min.js"></script>
 	<script src="src/libs/vue.js"></script>
 </head>
@@ -22,8 +26,12 @@
 
 	<aside id="game-config">
 		<h1>Game Configuration</h1>
-		<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
-		<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
+		<div>
+			<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
+		</div>
+		<div>
+			<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
+		</div>
 	</aside>
 
 	<script v-if="gameConsole.gameOn == true" src="game/js/game_prototype.js"></script>
