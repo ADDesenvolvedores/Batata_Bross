@@ -1,13 +1,3 @@
-#score {
-  font-size: 3em;
-  font-family: "Arial Black";
-  color: red;
-  text-shadow: 3px 3px 2px black;
-  position: absolute;
-  right: 15%;
-  top: 40%;
-  z-index: 250;
-}
 #play {
   font-size: 5em;
   font-family: "Arial Black";
@@ -20,4 +10,40 @@
 #play:hover {
   color: orangered;
   text-shadow: none;
+}
+#next{
+  font-size: 3em;
+  font-family: "Arial Black";
+  color: red;
+  text-shadow: 3px 3px 2px black;
+  position: absolute;
+  right: 15%;
+  top: 80%; 
+}
+#next:hover {
+  color: orangered;
+  text-shadow: none;
+}
+.aparecer{
+   animation: aparecer 1s ease-out; 
+}
+.desaparecer{
+   animation: desaparecer 1s ease-out; 
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
