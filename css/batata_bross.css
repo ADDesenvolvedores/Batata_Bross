@@ -6,6 +6,7 @@
     position: absolute;
     right:15%;
     top:40%;
+    z-index: 250;
 }
 #play {
   font-size: 5em;
@@ -15,7 +16,7 @@
   position: absolute;
   left: 42%;
   top: 33%;
-  z-index: 250;
+  
 
 }
 #play:hover {
