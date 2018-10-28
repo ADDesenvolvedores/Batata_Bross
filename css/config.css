@@ -6,6 +6,9 @@
   border: 3px solid #224400;
   padding: 0.5%;
 }
+#config-button:hover {
+  background-image: linear-gradient(to bottom, green, yellowgreen);
+}
 
 #game-config {
   background-color: green;
