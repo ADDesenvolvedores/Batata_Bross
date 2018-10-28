@@ -37,7 +37,7 @@
 
 		<input id="config-button" type="button" value="Configuration" onClick="gameConfig.toggle()">
 
-		<aside id="game-config" v-if="show">
+		<aside id="game-config" v-show="show">
 			<h1>Game Configuration</h1>
 			<section class="config-section">
 				<h2>Window</h2>
@@ -49,8 +49,6 @@
 					<h3>Height: </h3>
 					<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
 				</div>
-
-				<input v-if="gm" id="config-button" type="button" value="Game Master" onClick="gameMaster()">
 			</section>
 		</aside>
 	</main>
