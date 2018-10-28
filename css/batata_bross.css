@@ -1,3 +1,12 @@
+#score{
+    font-size: 3em;
+    font-family: "Arial Black";
+    color:red;
+    text-shadow: 3px 3px 2px black;
+    position: absolute;
+    right:15%;
+    top:40%;
+}
 #play {
   font-size: 5em;
   font-family: "Arial Black";
@@ -6,6 +15,8 @@
   position: absolute;
   left: 42%;
   top: 33%;
+  z-index: 250;
+
 }
 #play:hover {
   color: orangered;
