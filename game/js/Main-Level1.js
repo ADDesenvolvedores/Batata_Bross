@@ -3,7 +3,7 @@ play.addEventListener("click", function zika() {
   play.textContent = "";
   var config = {
     type: Phaser.AUTO,
-    parent: 'container',
+    parent: "container",
     width: gameConfig.width,
     height: gameConfig.height,
     physics: {
@@ -21,7 +21,7 @@ play.addEventListener("click", function zika() {
   };
 
   var game = new Phaser.Game(config);
-  var outScore = document.querySelector("#score");    
+  var outScore = document.querySelector("#score");
   var level1 = document.querySelector("canvas");
   var cursors;
   var score = 0;
@@ -166,9 +166,9 @@ play.addEventListener("click", function zika() {
       player.setTint(0x0088ff);
     } else scoreText.setText(" ");
 
-    if (Win()){
-        this.physics.pause();
-        nextLevel();
+    if (Win()) {
+      this.physics.pause();
+      nextLevel();
     }
   }
   function hitEnemy(player, enemy) {
@@ -206,9 +206,9 @@ play.addEventListener("click", function zika() {
       scoreText.setText(" ");
     }
 
-    if (Win()){ 
-        this.physics.pause();
-        nextLevel();
+    if (Win()) {
+      this.physics.pause();
+      nextLevel();
     }
   }
   function Win() {
@@ -217,15 +217,15 @@ play.addEventListener("click", function zika() {
     }
     return false;
   }
-  function nextLevel(){
-      next.textContent = "next";
-      next.addEventListener("click",function(){
-          level1.parentNode.removeChild(level1); 
-          next.textContent = "";
-          ptsB = 0;
-          ptsE = 0;
-          score = 0;
-          level2();
-      });
+  function nextLevel() {
+    next.textContent = "next";
+    next.addEventListener("click", function() {
+      level1.parentNode.removeChild(level1);
+      next.textContent = "";
+      ptsB = 0;
+      ptsE = 0;
+      score = 0;
+      level2();
+    });
   }
 });

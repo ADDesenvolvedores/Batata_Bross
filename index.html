@@ -10,36 +10,55 @@
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/batata_bross.css">
+	<link rel="stylesheet" href="css/title-screen.css">
+	<link rel="stylesheet" href="css/config.css">
+	<link rel="stylesheet" href="css/game.css">
 	<link rel="stylesheet" href="css/index.css">
 
 	<script src="game/js/phaser.min.js"></script>
 	<script src="src/libs/vue.js"></script>
-    
-  
 </head>
 
 <body>
-	<header>
+	<span id="title-screen" v-if="show">
 		<h1>Batata Bross</h1>
-	</header>
 
-	<h1 id="play">Play</h1>
-	<p id="score"></p>
-    <p id="next"></p>
+		<input type="button" value="Start" onClick="titleScreen.toggle()">
+	</span>
 
-	<aside id="game-config">
-		<h1>Game Configuration</h1>
-		<div>
-			<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
+	<main>
+		<p id="play">Play</p>
+		<p id="score"></p>
+		<p id="next"></p>
+
+		<div id="level-selector">
+
 		</div>
-		<div>
-			<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
-		</div>
-	</aside>  
-    <div id = "container"></div>
-	<script id="level1" v-if="gameConsole.gameOn == true" src="game/js/Main-Level1.js"></script>
-    <script id="level2" src="game/js/Level2.js"></script>
-    <script src="src/components/menu.js"></script>
+
+		<input id="config-button" type="button" value="Configuration" onClick="gameConfig.toggle()">
+
+		<aside id="game-config" v-if="show">
+			<h1>Game Configuration</h1>
+			<section class="config-section">
+				<h2>Window</h2>
+				<div class="config-box">
+					<h3>Width: </h3>
+					<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
+				</div>
+				<div class="config-box">
+					<h3>Height: </h3>
+					<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
+				</div>
+
+				<input v-if="gm" id="config-button" type="button" value="Game Master" onClick="gameMaster()">
+			</section>
+		</aside>
+	</main>
+
+	<div id="container"></div>
+	<script id="level1" src="game/js/Main-Level1.js"></script>
+	<script id="level2" src="game/js/Level2.js"></script>
+	<script src="src/components/menu.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 var gameConfig = new Vue({
   el: "#game-config",
   data: {
+    gm: false,
     show: false,
     width: 800,
     height: 600

@@ -1,32 +1,29 @@
+function level2() {
+  var script = document.querySelector("#level");
+  script.parentNode.removeChild(script);
+  var config = {
+    type: Phaser.AUTO,
+    parent: "container",
+    width: gameConfig.width,
+    height: gameConfig.height,
+    physics: {
+      default: "arcade",
+      arcade: {
+        gravity: { y: 300 },
+        debug: false
+      }
+    },
+    scene: {
+      preload: preload,
+      create: create,
+      update: update
+    }
+  };
+  var game = new Phaser.Game(config);
 
-function level2(){
-    var script= document.querySelector("#level1");
-    script.parentNode.removeChild(script);
-    var config = {
-        type: Phaser.AUTO,
-        parent: 'container',
-        width: gameConfig.width,
-        height: gameConfig.height,
-        physics: {
-          default: "arcade",
-          arcade: {
-            gravity: { y: 300 },
-            debug: false
-          }
-        },
-        scene: {
-          preload: preload,
-          create: create,
-          update: update
-        }
-    };
-    var game = new Phaser.Game(config);
-
-
-
-  var outScore = document.querySelector("#score");    
+  var outScore = document.querySelector("#score");
   var level2 = document.querySelector("canvas");
-  var cursors; 
+  var cursors;
   var score = 0;
   var scorePoints, tutorialText, scoreText, overText;
   var player, platforms, star;
@@ -115,7 +112,7 @@ function level2(){
   }
 
   function update() {
-     cursors = this.input.keyboard.createCursorKeys();
+    cursors = this.input.keyboard.createCursorKeys();
 
     if (cursors.left.isDown) {
       player.setVelocityX(-180);
@@ -133,7 +130,6 @@ function level2(){
 
     if (cursors.up.isDown && player.body.touching.down) {
       player.setVelocityY(-340);
-        
     } else if (cursors.down.isDown && !player.body.touching.down) {
       player.setVelocityY(340);
     }
@@ -170,9 +166,9 @@ function level2(){
       player.setTint(0x0088ff);
     } else scoreText.setText(" ");
 
-    if (Win()){
-        this.physics.pause();
-        nextLevel();
+    if (Win()) {
+      this.physics.pause();
+      nextLevel();
     }
   }
   function hitEnemy(player, enemy) {
@@ -210,9 +206,9 @@ function level2(){
       scoreText.setText(" ");
     }
 
-    if (Win()){ 
-        this.physics.pause();
-        nextLevel();
+    if (Win()) {
+      this.physics.pause();
+      nextLevel();
     }
   }
   function Win() {
@@ -221,15 +217,15 @@ function level2(){
     }
     return false;
   }
-  function nextLevel(){
-      next.textContent = "next";
-      next.addEventListener("click",function(){
-          level1.parentNode.removeChild(level1); 
-          next.textContent = "";
-          ptsB = 0;
-          ptsE = 0;
-          score = 0;
-          level2();
-      });
+  function nextLevel() {
+    next.textContent = "next";
+    next.addEventListener("click", function() {
+      level1.parentNode.removeChild(level1);
+      next.textContent = "";
+      ptsB = 0;
+      ptsE = 0;
+      score = 0;
+      level2();
+    });
   }
 }
