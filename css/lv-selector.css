@@ -1,0 +1,9 @@
+#level-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#level-selector > h1 {
+  font-size: 2rem;
+}
