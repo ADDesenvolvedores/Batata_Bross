@@ -220,7 +220,7 @@ play.addEventListener("click", function zika() {
   function nextLevel() {
     next.textContent = "next";
     next.addEventListener("click", function() {
-      level1.parentNode.removeChild(level1);
+      // level1.parentNode.removeChild(level1);
       next.textContent = "";
       ptsB = 0;
       ptsE = 0;

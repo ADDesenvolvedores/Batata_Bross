@@ -53,10 +53,14 @@
 		</aside>
 	</main>
 
-	<div id="container"></div>
-	<script id="level1" src="game/js/Main-Level1.js"></script>
-	<script id="level2" src="game/js/Level2.js"></script>
+	<div id="container" v-if="load"></div>
+
+	<script src="game/js/Main-Level1.js"></script>
+	<script src="game/js/Level2.js"></script>
 	<script src="src/components/menu.js"></script>
+	<script src="src/components/config.js"></script>
+	<script src="src/components/title.js"></script>
+	<script src="src/components/game-console.js"></script>
 </body>
 
 </html>
