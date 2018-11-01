@@ -1,11 +1,6 @@
 /*** CONFIGURATION WINDOW ***/
 #config-window {
-  position: fixed;
-  z-index: 250;
-
-  display: block;
-
-  width: 25%;
+  display: flex;
 }
 
 #config-button {
@@ -13,9 +8,6 @@
   background-image: linear-gradient(to bottom, yellowgreen, green);
 
   border: 3px solid #224400;
-
-  width: 100%;
-  height: 2rem;
 
   font-size: 1.2rem;
 }
@@ -30,8 +22,8 @@
   border: 3px solid #224400;
   padding: 1%;
 
-  height: 500px;
-  width: 96.5%;
+  /* height: 500px;
+  width: 96.5%; */
 }
 
 #game-config > h1 {

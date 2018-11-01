@@ -1,9 +1,18 @@
 #level-selector {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to bottom, black, transparent);
+}
+#level-selector > h1 {
+  font-size: 2rem;
+  padding: 1%;
+
+  color: white;
+}
+#selector-window {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#level-selector > h1 {
-  font-size: 2rem;
+.level-button {
 }
