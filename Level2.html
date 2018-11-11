@@ -21,18 +21,12 @@
 </head>
 
 <body>
+
 	<main>
 		
-
-		<div id="level-selector">
-			<h1>Choose One Level: </h1>
-			<div id="selector-window">
-				<input class="level-button" type="button" value="1" onClick="">
-			</div>
-
-		</div>
-
-		<aside id="config-window">
+		<p id="score"></p>
+        <p id="next"></p>
+        <aside id="config-window">
 			<input id="config-button" type="button" value="Configuration" onClick="gameConfig.toggle()">
 			<aside id="game-config" v-show="show">
 				<h1>Game Configuration</h1>
@@ -50,20 +44,10 @@
 			</aside>
 		</aside>
 
-
-
 	</main>
-
-	<div id="container"></div>
+    <script src="src/components/config.js"></script>
+	<script src="game/js/Level2.js"></script>
 	
-
-	<p id="score"></p>
-	<a id="next" href="Level2.html"></a>
-	<script src="src/components/menu.js"></script>
-	<script src="src/components/config.js"></script>
-	<script src="src/components/title.js"></script>
-	
-	<script src="game/js/Main-Level1.js"></script>
 </body>
 
 </html>
