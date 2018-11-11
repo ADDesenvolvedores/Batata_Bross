@@ -1,6 +1,5 @@
-var play = document.querySelector("#play");
-play.addEventListener("click", function zika() {
-  play.textContent = "";
+
+
   class Level1 extends Phaser.Scene{
     constructor(){
       super({key: 'Level1',active: true});
@@ -133,7 +132,7 @@ play.addEventListener("click", function zika() {
 
    
   var outScore = document.querySelector("#score");
-    
+  var next = document.querySelector("#next");
   var cursors;
   var score = 0;
   var scorePoints, tutorialText, scoreText, overText;
@@ -225,7 +224,6 @@ play.addEventListener("click", function zika() {
     return false;
   }
   function nextLevel() {
-      config.scene = [];
-    });
+      next.textContent = "next";
   }
-});
+
