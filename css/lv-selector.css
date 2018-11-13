@@ -1,6 +1,8 @@
 #level-selector {
   background-color: rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to bottom, black, transparent);
+
+  min-height: 400px;
 }
 #level-selector > h1 {
   font-size: 2rem;
@@ -15,4 +17,6 @@
 }
 
 .level-button {
+  background-color: greenyellow;
+  border: 2px solid green;
 }
