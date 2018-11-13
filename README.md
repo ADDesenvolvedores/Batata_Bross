@@ -1,6 +1,7 @@
-# Batata_Bross
+# Batata Bross
+
 Jogo de plataforma simples desenvolvido em javascript, utilizando a framework phaser.io.
 
-* Gráficos: Alexandre.
+- Gráficos: Alexandre.
 
-* Gameplay: Aluisio.
+- Gameplay: Aluisio.
