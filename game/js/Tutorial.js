@@ -1,11 +1,14 @@
-
-  class Level2 extends Phaser.Scene{
+var play = document.querySelector("#play");
+play.addEventListener("click", function zika() {
+  play.textContent = "";
+  class Level1 extends Phaser.Scene{
     constructor(){
-      super({key: 'Level2',active: true});
+      super({key: 'Level1',active: true});
     }
    
     preload() {
       this.load.image("enemy", "game/img/fries_low.png");
+      this.load.image("burger", "game/img/x-burger_low.png");
       this.load.image("background", "game/img/background.png");
       this.load.image("floor", "game/img/platform.png");
       this.load.image("batata", "game/img/icon.png");
@@ -15,7 +18,6 @@
       });
     }
     create() {
-      cursors = this.input.keyboard.createCursorKeys();
       this.add.image(400, 300, "background");
   
       scorePoints = this.add.text(16, 16, "score: 0", {
@@ -36,10 +38,8 @@
         .create(400, 568, "floor")
         .setScale(2)
         .refreshBody();
-  
-      platforms.create(300, 400, "floor");
-      platforms.create(50, 250, "floor");
-      platforms.create(750, 220, "floor");
+      
+      platforms.create(700,380, "floor");
   
       player = this.physics.add.sprite(100, 450, "player");
   
@@ -48,8 +48,8 @@
   
       star = this.physics.add.group({
         key: "batata",
-        repeat: 11,
-        setXY: { x: 12, y: 0, stepX: 70 }
+        repeat: 1,
+        setXY: { x: 200, y: 0, stepX: 200 }
       });
   
       star.children.iterate(function(child) {
@@ -88,7 +88,7 @@
     }
     
     update() {
-      
+      cursors = this.input.keyboard.createCursorKeys();
   
       if (cursors.left.isDown) {
         player.setVelocityX(-180);
@@ -115,6 +115,7 @@
 
   var config = {
     type: Phaser.AUTO,
+    parent: "container",
     width: gameConfig.width,
     height: gameConfig.height,
     physics: {
@@ -124,14 +125,14 @@
         debug: false
       }
     },
-    scene: [Level2],
+    scene: [Level1],
   }
   var enemies;
  
 
    
   var outScore = document.querySelector("#score");
-    
+  var next = document.querySelector("#next");
   var cursors;
   var score = 0;
   var scorePoints, tutorialText, scoreText, overText;
@@ -154,14 +155,21 @@
       player.x < 400
         ? Phaser.Math.Between(400, 800)
         : Phaser.Math.Between(0, 400);
-
-    var enemy = enemies.create(x, 16, "enemy");
-    enemy.setBounce(1);
-    enemy.setCollideWorldBounds(true);
-    enemy.setVelocity(Phaser.Math.Between(-200, 200), 20);
-    enemy.allowGravity = false;
-
-    if (ptsB == 12) {
+    if(ptsB%2 == 0){
+        var fritas = enemies.create(x, 16, "enemy");
+        fritas.setBounce(1);
+        fritas.setCollideWorldBounds(true);
+        fritas.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        fritas.allowGravity = false;
+    }
+    else{
+        var burgers = enemies.create(x, 525, "burger");
+        burgers.setBounce(1);
+        burgers.setCollideWorldBounds(true);
+        burgers.setVelocity(Phaser.Math.Between(-200, 200), 0);
+        
+    }
+    if (ptsB == 2) {
       scoreText = this.add.text(
         16,
         280,
@@ -189,11 +197,11 @@
           "Caraca muleke, parabéns! \n Você é realmente fitness!",
           { fontSize: "50px", fill: "rgb(0,150,0)" }
         );
-        //this.physics.pause();
+        this.physics.pause();
 
         player.setTint(0x008800);
 
-        //player.anims.play('turn');
+        player.anims.play('turn');
       } else scoreText.setText(" ");
     } else {
       outScore.textContent = "score: " + score;
@@ -217,12 +225,12 @@
     }
   }
   function Win() {
-    if (ptsE >= 12 && ptsB >= 12) {
+    if (ptsE >= 2 && ptsB >= 2) {
       return true;
     }
     return false;
   }
   function nextLevel() {
-    
+      next.textContent = "next";
   }
-
+});
