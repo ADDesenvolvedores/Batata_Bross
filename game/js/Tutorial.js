@@ -1,6 +1,3 @@
-// var play = document.querySelector("#play");
-// play.addEventListener("click", function zika() {
-play.textContent = "";
 class Level1 extends Phaser.Scene {
   constructor() {
     super({ key: "Level1", active: true });
@@ -228,4 +225,3 @@ function Win() {
 function nextLevel() {
   next.textContent = "next";
 }
-// });

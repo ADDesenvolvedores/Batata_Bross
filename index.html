@@ -33,56 +33,53 @@
       <div id="level-selector">
         <h1>Choose One Level:</h1>
         <div id="selector-window">
-          <input class="level-button" type="button" value="1" onClick="" />
+          <a class="level-button" href="tutorial.html">Tutorial</a>
+          <a class="level-button" href="level-1.html">1</a>
+          <a class="level-button" href="level-2.html">2</a>
+          <a class="level-button" href="#">3</a>
         </div>
-      </div>
 
-      <aside id="config-window">
-        <input
-          id="config-button"
-          type="button"
-          value="Configuration"
-          onClick="gameConfig.toggle()"
-        />
-        <aside id="game-config" v-show="show">
-          <h1>Game Configuration</h1>
-          <section class="config-section">
-            <h2>Window</h2>
-            <div class="config-box">
-              <h3>Width:</h3>
-              <input
-                class="config-input"
-                type="number"
-                placeholder="Type a Number"
-                v-model="width"
-                v-on:input="$emit('input', $event.target.value)"
-              />
-            </div>
-            <div class="config-box">
-              <h3>Height:</h3>
-              <input
-                class="config-input"
-                type="number"
-                placeholder="Type a Number"
-                v-model="height"
-                v-on:input="$emit('input', $event.target.value)"
-              />
-            </div>
-          </section>
+        <aside id="config-window">
+          <input
+            id="config-button"
+            type="button"
+            value="Configuration"
+            onClick="gameConfig.toggle()"
+          />
+          <aside id="game-config" v-show="show">
+            <h1>Game Configuration</h1>
+            <section class="config-section">
+              <h2>Window</h2>
+              <div class="config-box">
+                <h3>Width:</h3>
+                <input
+                  class="config-input"
+                  type="number"
+                  placeholder="Type a Number"
+                  v-model="width"
+                  v-on:input="$emit('input', $event.target.value)"
+                />
+              </div>
+              <div class="config-box">
+                <h3>Height:</h3>
+                <input
+                  class="config-input"
+                  type="number"
+                  placeholder="Type a Number"
+                  v-model="height"
+                  v-on:input="$emit('input', $event.target.value)"
+                />
+              </div>
+            </section>
+          </aside>
         </aside>
-      </aside>
+      </div>
     </main>
 
     <div id="container"></div>
 
-    <p id="play">Play</p>
-    <p id="score"></p>
-    <a id="next" href="level-1.html"></a>
-
     <script src="src/components/menu.js"></script>
     <script src="src/components/config.js"></script>
     <script src="src/components/title.js"></script>
-
-    <script src="game/js/tutorial.js"></script>
   </body>
 </html>
