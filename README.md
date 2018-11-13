@@ -2,6 +2,10 @@
 
 Jogo de plataforma simples desenvolvido em javascript, utilizando a framework phaser.io.
 
-- Gráficos: Alexandre.
+## Como Instalar
 
-- Gameplay: Aluisio.
+## Autores
+
+- **Alexandre Hiroyuki** - _Design e Programação da Interface_ - [AlexandreHiroyuki](https://github.com/AlexandreHiroyuki)
+
+- **Aluisio Amorim** - _Programação das Mecânicas do Jogo_ - [Amorim33](https://github.com/Amorim33)
