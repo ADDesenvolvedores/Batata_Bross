@@ -159,7 +159,7 @@ function collectBatatas(player, star) {
     var burgers = enemies.create(x, 525, "burger");
     burgers.setBounce(1);
     burgers.setCollideWorldBounds(true);
-    burgers.setVelocity(Phaser.Math.Between(-200, 200), 0);
+    burgers.setVelocity(Phaser.Math.Between(-200, 200), -50);
   }
   if (ptsB == 2) {
     scoreText = this.add.text(
