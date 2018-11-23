@@ -155,11 +155,18 @@
         ? Phaser.Math.Between(400, 800)
         : Phaser.Math.Between(0, 400);
 
-    var enemy = enemies.create(x, 16, "enemy");
-    enemy.setBounce(1);
-    enemy.setCollideWorldBounds(true);
-    enemy.setVelocity(Phaser.Math.Between(-200, 200), 20);
-    enemy.allowGravity = false;
+       if (ptsB % 2 == 0) {
+        var fritas = enemies.create(x, 16, "enemy");
+        fritas.setBounce(1);
+        fritas.setCollideWorldBounds(true);
+        fritas.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        fritas.allowGravity = false;
+      } else {
+        var burgers = enemies.create(x, 16, "burger");
+        burgers.setBounce(1);
+        burgers.setCollideWorldBounds(true);
+        burgers.setVelocity(Phaser.Math.Between(-200, 200), -50);
+      }
 
     if (ptsB == 12) {
       scoreText = this.add.text(
