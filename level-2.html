@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>Batata Bross</title>
+		<link rel="icon" href="static/img/icon.png" />
+		<meta charset="utf-8" />
 
-<head>
-	<title>Batata Bross</title>
-	<link rel="icon" href="img/icon.png">
-	<meta charset="utf-8">
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" href="src/css/reset.css" />
+		<link rel="stylesheet" href="src/css/batata_bross.css" />
+		<link rel="stylesheet" href="src/css/title-screen.css" />
+		<link rel="stylesheet" href="src/css/config.css" />
+		<link rel="stylesheet" href="src/css/game.css" />
+		<link rel="stylesheet" href="src/css/lv-selector.css" />
+		<link rel="stylesheet" href="src/css/index.css" />
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/batata_bross.css">
-	<link rel="stylesheet" href="css/title-screen.css">
-	<link rel="stylesheet" href="css/config.css">
-	<link rel="stylesheet" href="css/game.css">
-	<link rel="stylesheet" href="css/lv-selector.css">
-	<link rel="stylesheet" href="css/index.css">
+		<script src="src/game/js/phaser.min.js"></script>
+	</head>
 
-	<script src="game/js/phaser.min.js"></script>
-	<script src="src/libs/vue.js"></script>
-</head>
-
-<body>
-
-	<main>
-		
-		<p id="score"></p>
-        <p id="next"></p>
-        <aside id="config-window">
-			<input id="config-button" type="button" value="Configuration" onClick="gameConfig.toggle()">
-			<aside id="game-config" v-show="show">
-				<h1>Game Configuration</h1>
-				<section class="config-section">
-					<h2>Window</h2>
-					<div class="config-box">
-						<h3>Width: </h3>
-						<input class="config-input" type="number" placeholder="Type a Number" v-model="width" v-on:input="$emit('input', $event.target.value)">
-					</div>
-					<div class="config-box">
-						<h3>Height: </h3>
-						<input class="config-input" type="number" placeholder="Type a Number" v-model="height" v-on:input="$emit('input', $event.target.value)">
-					</div>
-				</section>
+	<body>
+		<main>
+			<p id="score"></p>
+			<p id="next"></p>
+			<aside id="config-window">
+				<input
+					id="config-button"
+					type="button"
+					value="Configuration"
+					onClick="gameConfig.toggle()"
+				/>
+				<aside id="game-config" v-show="show">
+					<h1>Game Configuration</h1>
+					<section class="config-section">
+						<h2>Window</h2>
+						<div class="config-box">
+							<h3>Width:</h3>
+							<input
+								class="config-input"
+								type="number"
+								placeholder="Type a Number"
+								v-model="width"
+								v-on:input="$emit('input', $event.target.value)"
+							/>
+						</div>
+						<div class="config-box">
+							<h3>Height:</h3>
+							<input
+								class="config-input"
+								type="number"
+								placeholder="Type a Number"
+								v-model="height"
+								v-on:input="$emit('input', $event.target.value)"
+							/>
+						</div>
+					</section>
+				</aside>
 			</aside>
-		</aside>
-
-	</main>
-    <script src="src/components/config.js"></script>
-	<script src="game/js/Level2.js"></script>
-	
-</body>
-
+		</main>
+		<script src="src/components/config.js"></script>
+		<script src="game/js/Level2.js"></script>
+	</body>
 </html>

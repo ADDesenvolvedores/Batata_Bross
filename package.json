@@ -1,0 +1,27 @@
+{
+	"name": "Batata_Bross_DevPack",
+	"version": "0.1.1",
+	"description": "Jogo de plataforma simples desenvolvido em javascript, utilizando a framework phaser.io.",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack.git"
+	},
+	"keywords": [],
+	"author": "AlexandreHiroyuki <alexandrehiroyuki@hotmail.com>",
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack/issues"
+	},
+	"homepage": "https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack#readme",
+	"devDependencies": {
+		"webpack": "^4.26.0",
+		"webpack-cli": "^3.1.2"
+	},
+	"dependencies": {
+		"lodash": "^4.17.11"
+	}
+}
