@@ -1,6 +1,5 @@
-var path = require("path");
-const merge = require("webpack-merge");
-const common = require("./webpack.common.js");
+var merge = require("webpack-merge");
+var common = require("./webpack.common.js");
 
 module.exports = merge(common, {
 	mode: "development",
@@ -9,21 +8,5 @@ module.exports = merge(common, {
 
 	devServer: {
 		contentBase: "../dist"
-	},
-
-	module: {
-		rules: [
-			{
-				enforce: "pre",
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "eslint-loader"
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "babel-loader"
-			}
-		]
 	}
 });
