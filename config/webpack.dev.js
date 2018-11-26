@@ -10,8 +10,18 @@ module.exports = {
 		}
 	},
 
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: ["babel-loader", "eslint-loader"]
+			}
+		]
+	},
+
 	output: {
 		filename: "bundle.js",
-		path: path.resolve(__dirname, "dist")
+		path: path.resolve(__dirname, "../dist")
 	}
 };
