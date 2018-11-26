@@ -1,27 +1,29 @@
 var path = require("path");
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
 
-module.exports = {
-	entry: "./src/main.js",
+module.exports = merge(common, {
+	mode: "development",
 
-	resolve: {
-		alias: {
-			"@app": path.resolve(__dirname, "src/"),
-			"@components": path.resolve(__dirname, "src/components/")
-		}
+	devtool: "inline-source-map",
+
+	devServer: {
+		contentBase: "../dist"
 	},
 
 	module: {
 		rules: [
 			{
+				enforce: "pre",
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: ["babel-loader", "eslint-loader"]
+				loader: "eslint-loader"
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: "babel-loader"
 			}
 		]
-	},
-
-	output: {
-		filename: "bundle.js",
-		path: path.resolve(__dirname, "../dist")
 	}
-};
+});

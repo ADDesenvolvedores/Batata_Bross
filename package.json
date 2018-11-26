@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "npx webpack --watch --config ./config/webpack.dev",
-		"build": "npx webpack --watch --config ./config/webpack.prod",
+		"start": "webpack-dev-server --open --config ./config/webpack.dev.js",
+		"build": "webpack --config ./config/webpack.prod.js",
 		"prod": "npx webpack --watch --config ./config/webpack.prod"
 	},
 	"repository": {
