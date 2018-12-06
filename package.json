@@ -1,6 +1,6 @@
 {
 	"name": "batata-bross",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Jogo de plataforma simples desenvolvido em javascript, utilizando a framework phaser.io.",
 	"private": true,
 	"scripts": {
