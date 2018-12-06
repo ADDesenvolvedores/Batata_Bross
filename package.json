@@ -1,14 +1,13 @@
 {
-	"name": "batata-bross-devpack",
-	"version": "0.1.1",
+	"name": "batata-bross",
+	"version": "0.1.0",
 	"description": "Jogo de plataforma simples desenvolvido em javascript, utilizando a framework phaser.io.",
 	"private": true,
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "npx webpack --watch --config ./config/webpack.dev",
-		"start": "webpack-dev-server --open --config ./config/webpack.dev.js",
-		"build": "webpack --config ./config/webpack.prod.js",
-		"prod": "npx webpack --watch --config ./config/webpack.prod"
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"test:unit": "vue-cli-service test:unit"
 	},
 	"repository": {
 		"type": "git",
@@ -21,22 +20,27 @@
 		"url": "https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack/issues"
 	},
 	"homepage": "https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack#readme",
-	"devDependencies": {
-		"@babel/core": "^7.1.6",
-		"@babel/preset-env": "^7.1.6",
-		"babel-loader": "^8.0.4",
-		"eslint": "^5.9.0",
-		"eslint-loader": "^2.1.1",
-		"karma": "^3.1.1",
-		"mocha-loader": "^2.0.0",
-		"uglifyjs-webpack-plugin": "^2.0.1",
-		"webpack": "^4.26.1",
-		"webpack-cli": "^3.1.2",
-		"webpack-merge": "^4.1.4"
-	},
 	"dependencies": {
-		"lodash": "^4.17.11",
+		"html-minifier-webpack-plugin": "^2.0.0",
 		"vue": "^2.5.17",
-		"vue-router": "^3.0.2"
+		"vue-router": "^3.0.1"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.0.5",
+		"@vue/cli-plugin-eslint": "^3.0.5",
+		"@vue/cli-plugin-unit-mocha": "^3.0.5",
+		"@vue/cli-service": "^3.0.5",
+		"@vue/eslint-config-prettier": "^4.0.0",
+		"@vue/test-utils": "^1.0.0-beta.20",
+		"babel-eslint": "^10.0.1",
+		"chai": "^4.1.2",
+		"css-loader": "^1.0.1",
+		"eslint": "^5.8.0",
+		"eslint-plugin-vue": "^5.0.0-0",
+		"node-sass": "^4.10.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"uglifyjs-webpack-plugin": "^2.0.1",
+		"vue-template-compiler": "^2.5.17"
 	}
 }
