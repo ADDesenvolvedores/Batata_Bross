@@ -12,6 +12,11 @@ export default new Router({
       component: Home
     },
     {
+      path: "/config",
+      name: "config",
+      component: () => import("./views/Config.vue")
+    },
+    {
       path: "/level-menu",
       name: "level-menu",
       // route level code-splitting
@@ -20,9 +25,14 @@ export default new Router({
       component: () => import("./views/LevelMenu.vue")
     },
     {
-      path: "/config",
-      name: "config",
-      component: () => import("./views/Config.vue")
+      path: "/console",
+      name: "console",
+      component: () => import("./views/Console.vue")
+    },
+    {
+      // will match everything
+      path: "*",
+      name: "404"
     }
   ]
 });
