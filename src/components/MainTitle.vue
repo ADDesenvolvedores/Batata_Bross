@@ -24,6 +24,10 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  word-wrap: break-word;
+  width: 12ch;
+  margin: auto;
+
   transition: 1s;
 }
 h1:hover {
@@ -32,7 +36,6 @@ h1:hover {
 }
 
 .main-title {
-  margin-left: 32%;
-  margin-right: 32%;
+  text-align: center;
 }
 </style>

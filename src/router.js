@@ -25,7 +25,7 @@ export default new Router({
       component: () => import("./views/LevelMenu.vue")
     },
     {
-      path: "/console",
+      path: "/console/:level-id",
       name: "console",
       component: () => import("./views/Console.vue")
     },

@@ -11,7 +11,7 @@
             <input
               class="config-input"
               type="number"
-              placeholder="Type a Number"
+              placeholder="Type a width value"
               v-model="consoleWidth"
               v-on:input="$emit('input', $event.target.value)"
             >
@@ -21,7 +21,7 @@
             <input
               class="config-input"
               type="number"
-              placeholder="Type a Number"
+              placeholder="Type a heigth value"
               v-model="consoleHeight"
               v-on:input="$emit('input', $event.target.value)"
             >
@@ -98,7 +98,7 @@ export default {
   background-image: linear-gradient(
     to right,
     rgba(200, 200, 200, 0),
-    rgb(18, 110, 0),
+    rgba(18, 110, 0, 0.5),
     rgba(200, 200, 200, 0)
   );
   background-size: 100% 3px;
