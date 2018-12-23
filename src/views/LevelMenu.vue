@@ -2,8 +2,8 @@
   <div class="LevelMenu">
     <h1>Choose One Level:</h1>
     <div class="level-selector">
-      <router-link to="/" class="level-button">Tutorial</router-link>
-      <LevelButton/>
+      <LevelButton levelId="Tutorial"/>
+      <LevelButton levelId="Level 1"/>
     </div>
   </div>
 </template>
@@ -34,23 +34,5 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.level-button {
-  background-color: greenyellow;
-  background-image: linear-gradient(to bottom, yellowgreen, green);
-
-  border: 3px solid #224400;
-
-  width: 20%;
-  height: 1.5rem;
-
-  font-size: 1.2rem;
-  text-align: center;
-
-  color: black;
-}
-.level-button:hover {
-  background-image: linear-gradient(to bottom, green, yellowgreen);
 }
 </style>
