@@ -12,7 +12,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "MainMenu"
+};
 </script>
 
 <style scoped lang="scss">

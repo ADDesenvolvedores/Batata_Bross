@@ -3,13 +3,19 @@
     <h1>Choose One Level:</h1>
     <div class="level-selector">
       <router-link to="/" class="level-button">Tutorial</router-link>
+      <LevelButton/>
     </div>
   </div>
 </template>
 
 <script>
+import LevelButton from "@/components/LevelButton.vue";
+
 export default {
-  name: "level-menu"
+  name: "level-menu",
+  components: {
+    LevelButton
+  }
 };
 </script>
 
