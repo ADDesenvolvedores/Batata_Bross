@@ -1,27 +1,26 @@
 <template>
-  <div class="LevelMenu">
+  <div class="level-menu">
     <h1>Choose One Level:</h1>
     <div class="level-selector">
-      <LevelButton levelId="Tutorial"/>
-      <LevelButton levelId="Level 1"/>
+      <StdRtButton path="/" content="Tutorial"/>
+      <StdRtButton path="/" content="Level 1"/>
     </div>
   </div>
 </template>
 
 <script>
-import LevelButton from "@/components/LevelButton.vue";
+import StdRtButton from "@/components/StdRtButton.vue";
 
 export default {
   name: "level-menu",
   components: {
-    LevelButton
+    StdRtButton
   }
 };
 </script>
 
-
 <style lang="scss" scoped>
-.LevelMenu {
+.level-menu {
   h1 {
     font-size: 2rem;
     padding: 1%;
