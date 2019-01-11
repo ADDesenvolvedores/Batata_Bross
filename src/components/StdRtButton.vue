@@ -27,7 +27,8 @@ export default {
   text-align: center;
 
   color: white;
-}:hover {
+}
+:hover {
   background-image: linear-gradient(to right, black 90%, transparent);
 }
 </style>
