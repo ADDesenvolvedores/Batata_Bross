@@ -36,7 +36,8 @@
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "vue-cli-plugin-electron-builder": "^1.0.0-rc.10",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "webpack-dev-server": ">=3.1.11"
   },
   "bugs": {
     "url": "https://github.com/AlexandreHiroyuki/Batata_Bross_DevPack/issues"
