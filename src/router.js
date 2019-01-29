@@ -20,6 +20,14 @@ export default new Router({
       component: () => import("./views/LevelMenu.vue")
     },
     {
+      path: "/tutorial",
+      name: "tutorial",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("./views/Tutorial.vue")
+    },
+    {
       path: "/config",
       name: "config",
       component: () => import("./views/Config.vue")
