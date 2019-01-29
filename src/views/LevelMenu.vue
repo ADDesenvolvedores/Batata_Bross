@@ -2,7 +2,7 @@
   <div class="LevelMenu">
     <h1>Choose One Level:</h1>
     <div class="level-selector">
-      <router-link to="/" class="level-button">Tutorial</router-link>
+      <router-link to="/tutorial" class="level-button">Tutorial</router-link>
     </div>
   </div>
 </template>
