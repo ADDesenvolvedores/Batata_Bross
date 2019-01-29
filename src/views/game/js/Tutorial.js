@@ -1,6 +1,6 @@
-class Level1 extends Phaser.Scene {
+class Tutorial extends Phaser.Scene {
   constructor() {
-    super({ key: "Level1", active: true });
+    super({ key: "Tutorial", active: true });
   }
 
   preload() {
@@ -111,7 +111,6 @@ class Level1 extends Phaser.Scene {
 
 var config = {
   type: Phaser.AUTO,
-  parent: "container",
   width: gameConfig.width,
   height: gameConfig.height,
   physics: {
@@ -121,12 +120,12 @@ var config = {
       debug: false
     }
   },
-  scene: [Level1]
+  scene: [Tutorial]
 };
 var enemies;
 
-var outScore = document.querySelector("#score");
-var next = document.querySelector("#next");
+var outScore = 0;//document.querySelector("#score");
+var next = 0;//document.querySelector("#next");
 var cursors;
 var score = 0;
 var scorePoints, tutorialText, scoreText, overText;
